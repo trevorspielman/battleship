@@ -22,3 +22,5 @@ router.get('/api/games/:gameId', (req, res, next) => {
         })
         .catch(next)
 })
+
+module.exports = router

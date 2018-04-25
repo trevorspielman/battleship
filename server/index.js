@@ -6,6 +6,10 @@ var session = require('./auth/session')
 var port = process.env.PORT || 3000
 require('./db/mlab-config')
 var authRoutes = require('./auth/routes')
+var boardRoutes = require('./routes/boards')
+var cellRoutes = require('./routes/cells')
+var gameRoutes = require('./routes/games')
+var shipRoutes = require('./routes/ships')
 
 
 var whitelist = ['http://localhost:8080', '//brewbros.herokuapp.com']
@@ -24,6 +28,10 @@ server.use(bp.urlencoded({ extended: true }))
 server.use(express.static(__dirname + '/../public/dist'))
 
 server.use(authRoutes)
+server.use(boardRoutes)
+server.use(cellRoutes)
+server.use(gameRoutes)
+server.use(shipRoutes)
 
 server.use('/api/*', (req, res, next) => {
     if (req.method.toLowerCase() !== 'get' && !req.session.uid) {
