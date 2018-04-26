@@ -8,6 +8,7 @@ import { GameplayComponent } from './gameplay/gameplay.component';
 import { BoardCreationComponent } from './board-creation/board-creation.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OpponentsBoardComponent } from './opponents-board/opponents-board.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { OpponentsBoardComponent } from './opponents-board/opponents-board.compo
     OpponentsBoardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
