@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { GameplayComponent } from './gameplay/gameplay.component';
 import { BoardCreationComponent } from './board-creation/board-creation.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { OpponentsBoardComponent } from './opponents-board/opponents-board.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -15,10 +17,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     GameplayComponent,
     BoardCreationComponent,
-    NavbarComponent
+    NavbarComponent,
+    OpponentsBoardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
